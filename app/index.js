@@ -19,8 +19,12 @@ module.exports = class extends Generator{
             name: 'description',
             message: 'What is your project\'s description?'
         }]).then((answers) => {
+            console.log('answers.name:', answers.name)
             this.name = answers.name;
             this.description = answers.description;
+            if (!this.name) {
+                throw chalk.red('Please input your frame name.');
+            }
         });
     }
 
@@ -36,13 +40,13 @@ module.exports = class extends Generator{
             }
         );
     }
-    
+
     end() {
         var npmDir = process.cwd() + '/' + this.name;
         process.chdir(npmDir);
-        /*this.installDependencies({
+        this.installDependencies({
             bower: false,
             npm: true
-        });*/
+        });
     }
 };
