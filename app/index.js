@@ -18,7 +18,7 @@ module.exports = Generator.extend({
     },
     initialCopy: function() {
         this.fs.copy(
-            this.templatePath(''),
+            this.templatePath('frame/'),
             this.destinationPath(this.name)
         );
     },
