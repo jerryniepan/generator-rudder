@@ -1,7 +1,9 @@
 {
-  "name": "table-canvas",
-  "version": "1.0.0",
-  "description": "table canvas版本",
+  "name": "<%= name %>",
+  "version": "v1.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "email": "<%= email %>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,13 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@haizhi.me:xiefei/table-canvas.git"
+    "url": "git@haizhi.me:xxx/xxx.git"
   },
   "keywords": [
     "table",
     "canvas"
   ],
-  "author": "xiefei",
   "license": "ISC",
   "devDependencies": {
     "grunt": "~0.4.2",

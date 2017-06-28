@@ -1,7 +1,14 @@
-var Generator = require('yeoman-generator');
+const Generator = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
 
-module.exports = Generator.extend({
-    prompts: function() {
+
+module.exports = class extends Generator{
+    prompts() {
+        this.log(yosay(
+          'Welcome to the posh ' + chalk.green('generator-rudder') + ' generator!'
+        ));
+        // return;
         return this.prompt([{
             type: 'input',
             name: 'name',
@@ -15,19 +22,27 @@ module.exports = Generator.extend({
             this.name = answers.name;
             this.description = answers.description;
         });
-    },
-    initialCopy: function() {
-        this.fs.copy(
+    }
+
+    initialCopy() {
+        this.fs.copyTpl(
             this.templatePath('frame/'),
-            this.destinationPath(this.name)
+            this.destinationPath(this.name),
+            {
+                name: this.name,
+                description: this.description,
+                author: this.user.git.name(),
+                email: this.user.git.email()
+            }
         );
-    },
-    end: function() {
+    }
+    
+    end() {
         var npmDir = process.cwd() + '/' + this.name;
         process.chdir(npmDir);
-        this.installDependencies({
+        /*this.installDependencies({
             bower: false,
             npm: true
-        });
+        });*/
     }
-});
+};
