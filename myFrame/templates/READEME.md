@@ -58,7 +58,7 @@
   > grunt stop
 
 # 六、示例
-[BDP日志统计SDK](http://git.haizhi.com/WEB/bdp-sdk-js)
+[BDP日志统计SDK](http://git.haizhi.com/WEB/bdp-sdk-js)    
 [长服务示例](http://xf.test.bdp.cn/demo/example1/index.html)
 
 
