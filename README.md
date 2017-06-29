@@ -16,3 +16,10 @@
 
 接着按照提示填写`工程名称`和相关`描述`，之后按`回车`工程就在当前目录下创建成功了，程序会自动帮您安装依赖，cd进入直接执行npm start 就可以启动服务进行开发使用了，具体框架的使用方法，见[myFrame-readme](https://github.com/jerryniepan/generator-rudder/blob/master/myFrame/templates/READEME.md)
 
+#### 模块
+
+#### page
+
+#### 组件
+
+
