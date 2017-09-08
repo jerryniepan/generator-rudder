@@ -18,10 +18,11 @@
 
 `可以一键create类似bop-sdk这样的框架，或者搭个人服务站，之后实现：一键构建BDP内部工程、模块(含controller/filter/fatory/direct等文件)、组件、页面、构建框架(frame)工程`
 
-#### 模块
+#### 自定义图表模块
+> yo rudder:custom-chart 
 
-#### page
+`一键创建自定义图表开发组件` 规定用户范式结构
 
-#### 组件
+
 
 
